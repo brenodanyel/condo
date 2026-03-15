@@ -1,0 +1,54 @@
+@import 'tailwindcss' layer(tw);
+
+@layer tw {
+	@theme {
+		--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+		--color-brand: #2563EB;
+		--color-brand-light: #EFF6FF;
+		--color-surface: #F8FAFC;
+	}
+}
+
+/* Reset Ionic defaults to let Tailwind control everything */
+:root {
+	--ion-background-color: #F8FAFC;
+	--ion-text-color: #0f172a;
+	--ion-font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+	--ion-toolbar-background: #F8FAFC;
+	--ion-item-background: transparent;
+	--ion-card-background: #ffffff;
+}
+
+ion-content {
+	--background: #F8FAFC;
+	--color: #0f172a;
+}
+
+ion-content::part(scroll) {
+	scrollbar-width: none;
+}
+
+ion-tab-button {
+	--ripple-color: transparent;
+}
+
+body {
+	font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+	background: #F8FAFC;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ * Tailwind v4 preflight puts `button { padding: 0 }` in the base
+ * layer. This revert restores the button padding back to "unset"
+ * so that Tailwind utility classes (py-*, px-*) can take effect.
+ */
+button {
+	padding: revert-layer;
+}
+
+input,
+textarea {
+	font-family: inherit;
+}

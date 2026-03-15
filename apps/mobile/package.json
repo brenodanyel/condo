@@ -1,0 +1,35 @@
+{
+	"name": "@condo/mobile",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "vue-tsc && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@capacitor/core": "^8.2.0",
+		"@condo/shared": "workspace:*",
+		"@ionic/vue": "^8.0.0",
+		"@ionic/vue-router": "^8.0.0",
+		"better-auth": "^1.5.5",
+		"ionicons": "^7.4.0",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.0",
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@capacitor/android": "^8.2.0",
+		"@capacitor/cli": "^8.2.0",
+		"@capacitor/ios": "^8.2.0",
+		"@tailwindcss/vite": "^4.2.1",
+		"@vitejs/plugin-vue": "^5.2.1",
+		"autoprefixer": "^10.4.27",
+		"postcss": "^8.5.8",
+		"tailwindcss": "^4.2.1",
+		"typescript": "^5.7.3",
+		"vite": "^8.0.0",
+		"vue-tsc": "^2.2.0"
+	}
+}
